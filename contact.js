@@ -174,6 +174,16 @@ function countContacts(contactArray){
         
     }
 }
+function searchByCityOrState(contactArray,cityorstate){
+    if(cityorstate == "Bangalore"){
+        console.log("Contact by city");
+        contactArray.filter(name => name.city == cityorstate).forEach(contact=>console.log(contact.toString()));
+    }
+    if(cityorstate == "Karnataka"){
+        console.log("Contacts by state");
+        contactArray.filter(name => name.state == cityorstate).forEach(contact=>console.log(contact.toString()));
+    }
+}
 try {
     addressBookArray.push(new Contact("Sachin", "Tendulkar", "Jayanagar", "Bangalore", "Karnataka", 560001, "91 9876543210", "sachin@gmail.com"));
 } catch (e) {
@@ -181,8 +191,8 @@ try {
 }
 
 try {
-    addressBookArray.push(new Contact("Praju", "Hanasi","vandii", "Mumbai", 'Maharastra', 
-    123556, '91 8899007788', "abc@gmail.com"));
+    addressBookArray.push(new Contact("Praju", "Hanasi","Vandi", "Mumbai", "Maharashtra",
+     456789, "8217499000", "abc@gmail.com"));
 } catch (e) {
     console.log(e);
 }
@@ -198,3 +208,5 @@ console.log(addressBookArray);
 countContacts(addressBookArray);
 addContact(addressBookArray,"Virender", "Sehwag");
 console.log(addressBookArray);
+searchByCityOrState(addressBookArray,'Bangalore');
+searchByCityOrState(addressBookArray,'Karnataka');
