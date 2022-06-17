@@ -191,8 +191,8 @@ try {
 }
 
 try {
-    addressBookArray.push(new Contact("Praju", "Hanasi","Vandi", "Mumbai", "Maharashtra",
-     456789, "8217499000", "abc@gmail.com"));
+    addressBookArray.push(new Contact("Praju", "Hanasi","Vandii", "MUMbai", 'Maharastra',
+     456789, '91 99008800770', "abc@gmail.com"));
 } catch (e) {
     console.log(e);
 }
